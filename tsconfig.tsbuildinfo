@@ -1,1 +1,1 @@
-{"root":["./src/schema.ts","./src/server.ts","./src/middlewares/auth.ts"],"version":"5.9.3"}
+{"root":["./environment.d.ts","./src/schema.ts","./src/server.ts","./src/middlewares/auth.ts","./src/routes/authRoutes.ts","./src/routes/brainRoutes.ts","./src/routes/contentRoutes.ts"],"version":"5.9.3"}
