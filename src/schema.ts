@@ -8,11 +8,10 @@ const UserSchema = new Schema({
 
 const ContentSchema = new Schema({
     link : String,
-    type : {type : String, enum:['image' , 'video' , 'article' , 'tweet']} ,
+    type : {type : String, enum:['image' , 'video' , 'article' , 'tweet' , 'reel']} ,
     title: String,
     tags:  [{type : Schema.Types.ObjectId , ref : 'Tag' } ],
-    userId : {type : Schema.Types.ObjectId , ref : 'User' }
-
+    userId : {type : Schema.Types.ObjectId , ref : 'User' } 
 })
 
 const TagSchema = new Schema({
