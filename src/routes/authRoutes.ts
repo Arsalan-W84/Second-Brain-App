@@ -3,11 +3,10 @@ import z from "zod"
 import { UserModel } from "../schema.js";
 import bcrypt from "bcrypt"
 import JWT from "jsonwebtoken"
-// const JWT_SECRET = process.env.JWT_SECRET;
 const router = express.Router();
 
 
-const ValidUser = z.object({
+const ValidUser = z.object({//zod validation for user entry
       username : z.string().min(3).max(15) , 
       password : z.string().min(6).max(15)
     });
