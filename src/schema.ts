@@ -8,7 +8,7 @@ const UserSchema = new Schema({
 
 const ContentSchema = new Schema({
     link : String,
-    type : {type : String, enum:['image' , 'video' , 'article' , 'tweet' , 'reel']} ,
+    type : {type : String, enum:['photo' , 'video' , 'article' , 'tweet']} ,
     title: String,
     tags:  [{type : Schema.Types.ObjectId , ref : 'Tag' } ],
     userId : {type : Schema.Types.ObjectId , ref : 'User' } 

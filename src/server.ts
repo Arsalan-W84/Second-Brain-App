@@ -3,6 +3,7 @@ dotenv.config();
 
 import express from 'express';
 const app = express();
+import cors from 'cors'
 
 import mongoose from 'mongoose';
 
@@ -12,6 +13,7 @@ import brainRoutes from './routes/brainRoutes.js'
 
 
 app.use(express.json());
+app.use(cors());
 
 app.use("/api/v1/auth" , authRoutes);//AUTH ENDPOINTS
 
