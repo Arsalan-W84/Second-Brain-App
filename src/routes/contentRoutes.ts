@@ -8,17 +8,18 @@ const Router = express.Router();
 Router.post("/" , authmiddleware , async(req,res) => { // POST A CONTENT 
     //@ts-ignore
     const UserId = req.userId;
-    const {link , type , title} = req.body;
+    const {link , type , title, body} = req.body;
     try{
         await ContentModel.create({
             link: link,
             type : type , 
             title : title , 
+            body : body, 
             tags : [] , 
             userId : UserId,
            // authorId : authorId   app feature allows other users to post content in my brain , what change will i make here????
         });
-        return res.json({
+        return res.status(201).json({
             message :  "content post"
         });
     }catch(e){

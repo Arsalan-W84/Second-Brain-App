@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { required } from 'zod/mini';
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -11,6 +12,7 @@ const ContentSchema = new Schema({
     type : {type : String, enum:['photo' , 'video' , 'article' , 'tweet', 'linkedin']} ,
     title: String,
     tags:  [{type : Schema.Types.ObjectId , ref : 'Tag' } ],
+    body : {type : String}, 
     userId : {type : Schema.Types.ObjectId , ref : 'User' } 
 })
 
