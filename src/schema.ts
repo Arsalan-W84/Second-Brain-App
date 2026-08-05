@@ -11,7 +11,6 @@ const ContentSchema = new Schema({
     link : String,
     type : {type : String, enum:['photo' , 'video' , 'article' , 'tweet', 'linkedin']} ,
     title: String,
-    tags:  [{type : Schema.Types.ObjectId , ref : 'Tag' } ],
     body : {type : String}, 
     userId : {type : Schema.Types.ObjectId , ref : 'User' } 
 })

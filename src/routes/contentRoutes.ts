@@ -1,7 +1,6 @@
 import express from "express";
 import { authmiddleware } from "../middlewares/auth.js";
 import { ContentModel } from "../schema.js";
-import { error } from "node:console";
 const Router = express.Router();
 
 
@@ -15,7 +14,6 @@ Router.post("/" , authmiddleware , async(req,res) => { // POST A CONTENT
             type : type , 
             title : title , 
             body : body, 
-            tags : [] , 
             userId : UserId,
            // authorId : authorId   app feature allows other users to post content in my brain , what change will i make here????
         });
